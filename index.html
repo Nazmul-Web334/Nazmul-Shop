@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nazmul Shop - Online Shopping</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <p>Welcome to Nazmul Shop</p>
+
+            <div class="top-links">
+                <a href="#">Help Center</a>
+                <a href="#">Track Order</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+
+
+        <!-- Main Header -->
+        <div class="main-header">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">Nazmul Shop</a>
+            </div>
+
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for products..."
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+            </div>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <a href="#" class="header-item">
+                    Account
+                </a>
+
+                <a href="cart.html" class="header-item">
+                    Cart
+                    <span id="cartCount">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation Menu -->
+        <nav class="navbar">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="#categories">Categories</a>
+                </li>
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#offers">Offers</a>
+                </li>
+
+                <li>
+                    <a href="#new-arrivals">New Arrivals</a>
+                </li>
+
+                <li>
+                    <a href="#best-selling">Best Selling</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small-text">
+                Welcome to Nazmul Shop
+            </p>
+
+            <h1>
+                Shop Everything You Love
+            </h1>
+
+            <p>
+                Discover quality products at the best prices.
+            </p>
+
+            <a href="#products" class="shop-now-btn">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section id="categories" class="categories-section">
+
+        <div class="section-title">
+
+            <h2>
+                Shop By Category
+            </h2>
+
+            <p>
+                Find your favorite products easily
+            </p>
+
+        </div>
+
+
+        <div class="category-container">
+
+
+            <!-- Category 1 -->
+            <div class="category-card">
+
+                <div class="category-icon">
+                    🧴
+                </div>
+
+                <h3>
+                    Beauty
+                </h3>
+
+                <a href="#">
+                    View Products
+                </a>
+
+            </div>
+
+
+            <!-- Category 2 -->
+            <div class="category-card">
+
+                <div class="category-icon">
+                    👕
+                </div>
+
+                <h3>
+                    Fashion
+                </h3>
+
+                <a href="#">
+                    View Products
+                </a>
+
+            </div>
+
+
+            <!-- Category 3 -->
+            <div class="category-card">
+
+                <div class="category-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Electronics
+                </h3>
+
+                <a href="#">
+                    View Products
+                </a>
+
+            </div>
+
+
+            <!-- Category 4 -->
+            <div class="category-card">
+
+                <div class="category-icon">
+                    🏠
+                </div>
+
+                <h3>
+                    Home & Living
+                </h3>
+
+                <a href="#">
+                    View Products
+                </a>
+
+            </div>
+
+
+            <!-- Category 5 -->
+            <div class="category-card">
+
+                <div class="category-icon">
+                    👟
+                </div>
+
+                <h3>
+                    Shoes
+                </h3>
+
+                <a href="#">
+                    View Products
+                </a>
+
+            </div>
+
+
+            <!-- Category 6 -->
+            <div class="category-card">
+
+                <div class="category-icon">
+                    🎁
+                </div>
+
+                <h3>
+                    Gifts
+                </h3>
+
+                <a href="#">
+                    View Products
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= OFFERS ================= -->
+
+    <section id="offers" class="offers-section">
+
+        <div class="offer-content">
+
+            <p>
+                Special Offer
+            </p>
+
+            <h2>
+                Up To 50% OFF
+            </h2>
+
+            <p>
+                Limited time offer on selected products
+            </p>
+
+            <a href="#products">
+                Shop Offers
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURED PRODUCTS ================= -->
+
+    <section id="products" class="products-section">
+
+        <div class="section-title">
+
+            <h2>
+                Featured Products
+            </h2>
+
+            <p>
+                Our popular products
+            </p>
+
+        </div>
+
+
+        <div class="product-container">
+
+
+            <!-- Product 1 -->
+
+            <div class="product-card"
+     onclick="openProduct('Premium Perfume', 850, 'Perfume', 'Long lasting premium fragrance.')">
+
+                <div class="product-image">
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="Premium Perfume"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Perfume
+                    </p>
+
+                    <h3>
+                        Premium Perfume
+                    </h3>
+
+                    <p class="product-description">
+                        Long lasting premium fragrance.
+                    </p>
+
+                    <div class="price">
+                        ৳850
+                    </div>
+
+                    <button
+                        class="add-to-cart"
+                        data-product="Premium Perfume"
+                        data-price="850"
+                    >
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Product 2 -->
+
+            <div class="product-card"
+     onclick="openProduct('Luxury Soap', 250, 'Beauty', 'Premium quality soap for everyday use.')">
+
+                <div class="product-image">
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="Luxury Soap"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Beauty
+                    </p>
+
+                    <h3>
+                        Luxury Soap
+                    </h3>
+
+                    <p class="product-description">
+                        Premium quality soap for everyday use.
+                    </p>
+
+                    <div class="price">
+                        ৳250
+                    </div>
+
+                    <button
+                        class="add-to-cart"
+                        data-product="Luxury Soap"
+                        data-price="250"
+                    >
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Product 3 -->
+
+            <div class="product-card"
+     onclick="openProduct('Smart Watch', 1500, 'Electronics', 'Stylish smart watch with modern features.')">
+
+                <div class="product-image">
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="Smart Watch"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Electronics
+                    </p>
+
+                    <h3>
+                        Smart Watch
+                    </h3>
+
+                    <p class="product-description">
+                        Stylish smart watch with modern features.
+                    </p>
+
+                    <div class="price">
+                        ৳1,500
+                    </div>
+
+                    <button
+                        class="add-to-cart"
+                        data-product="Smart Watch"
+                        data-price="1500"
+                    >
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Product 4 -->
+
+            <div class="product-card"
+     onclick="openProduct('Men Premium Shirt', 750, 'Fashion', 'Comfortable and stylish mens shirt.')">
+
+                <div class="product-image">
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="Men's Shirt"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Fashion
+                    </p>
+
+                    <h3>
+                        Men's Premium Shirt
+                    </h3>
+
+                    <p class="product-description">
+                        Comfortable and stylish men's shirt.
+                    </p>
+
+                    <div class="price">
+                        ৳750
+                    </div>
+
+                    <button
+                        class="add-to-cart"
+                        data-product="Men's Premium Shirt"
+                        data-price="750"
+                    >
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= NEW ARRIVALS ================= -->
+
+    <section id="new-arrivals" class="products-section">
+
+        <div class="section-title">
+
+            <h2>
+                New Arrivals
+            </h2>
+
+            <p>
+                Check out our latest products
+            </p>
+
+        </div>
+
+
+        <div class="product-container">
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="New Product"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        New Fashion Product
+                    </h3>
+
+                    <div class="price">
+                        ৳1,200
+                    </div>
+
+                    <button class="add-to-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="New Product"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        New Beauty Product
+                    </h3>
+
+                    <div class="price">
+                        ৳650
+                    </div>
+
+                    <button class="add-to-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="New Product"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        New Electronics
+                    </h3>
+
+                    <div class="price">
+                        ৳2,500
+                    </div>
+
+                    <button class="add-to-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="New Product"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        New Home Product
+                    </h3>
+
+                    <div class="price">
+                        ৳900
+                    </div>
+
+                    <button class="add-to-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= BEST SELLING ================= -->
+
+    <section id="best-selling" class="products-section">
+
+        <div class="section-title">
+
+            <h2>
+                Best Selling Products
+            </h2>
+
+            <p>
+                Products loved by our customers
+            </p>
+
+        </div>
+
+
+        <div class="product-container">
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="Best Selling Product"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        Best Selling Product
+                    </h3>
+
+                    <div class="price">
+                        ৳999
+                    </div>
+
+                    <button class="add-to-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="Best Selling Product"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        Premium Product
+                    </h3>
+
+                    <div class="price">
+                        ৳1,350
+                    </div>
+
+                    <button class="add-to-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="Best Selling Product"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        Customer Favorite
+                    </h3>
+
+                    <div class="price">
+                        ৳750
+                    </div>
+
+                    <button class="add-to-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://via.placeholder.com/300x300"
+                        alt="Best Selling Product"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        Special Product
+                    </h3>
+
+                    <div class="price">
+                        ৳1,100
+                    </div>
+
+                    <button class="add-to-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="features-section">
+
+        <div class="section-title">
+
+            <h2>
+                Why Choose Nazmul Shop?
+            </h2>
+
+        </div>
+
+
+        <div class="features-container">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🚚
+                </div>
+
+                <h3>
+                    Fast Delivery
+                </h3>
+
+                <p>
+                    Fast and reliable delivery service.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🔒
+                </div>
+
+                <h3>
+                    Secure Payment
+                </h3>
+
+                <p>
+                    Your payment information is protected.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Quality Products
+                </h3>
+
+                <p>
+                    We focus on quality and customer satisfaction.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📞 01746410024
+                </div>
+
+                <h3>
+                    Customer Support
+                </h3>
+
+                <p>
+                    We are here to help you.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div class="newsletter-content">
+
+            <h2>
+                Subscribe To Our Newsletter
+            </h2>
+
+            <p>
+                Get updates about new products and special offers.
+            </p>
+
+
+            <form id="newsletterForm">
+
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+
+        <div class="footer-container">
+
+
+            <!-- About -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Nazmul Shop
+                </h3>
+
+                <p>
+                    Your trusted online shopping destination.
+                    Shop quality products at affordable prices.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#products">
+                    Products
+                </a>
+
+                <a href="#offers">
+                    Offers
+                </a>
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+            </div>
+
+
+            <!-- Customer Service -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Customer Service
+                </h3>
+
+                <a href="#">
+                    Help Center
+                </a>
+
+                <a href="#">
+                    Return Policy
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📞 Phone: 01746410024
+                </p>
+
+                <p>
+                    📧 Email: support@nazmulshop.com
+                </p>
+
+                <p>
+                    📍 Bangladesh
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Nazmul Shop. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript File -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

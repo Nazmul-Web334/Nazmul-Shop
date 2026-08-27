@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - Nazmul Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="main-header">
+
+            <div class="logo">
+
+                <a href="index.html">
+                    Nazmul Shop
+                </a>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <a href="index.html"
+                   class="header-item">
+
+                    🏠 Home
+
+                </a>
+
+
+                <a href="cart.html"
+                   class="header-item">
+
+                    🛒 Cart
+
+                    <span id="cartCount">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#products">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <main class="checkout-page">
+
+
+        <div class="checkout-title">
+
+            <h1>
+                🛍️ Checkout
+            </h1>
+
+            <p>
+                আপনার অর্ডারের তথ্য পূরণ করুন
+            </p>
+
+        </div>
+
+
+
+        <div class="checkout-layout">
+
+
+            <!-- ================= CUSTOMER FORM ================= -->
+
+            <div class="checkout-form-box">
+
+                <h2>
+                    Customer Information
+                </h2>
+
+
+                <form id="checkoutForm">
+
+
+                    <!-- Name -->
+
+                    <div class="checkout-group">
+
+                        <label for="customerName">
+                            আপনার নাম
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="আপনার পূর্ণ নাম"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Mobile -->
+
+                    <div class="checkout-group">
+
+                        <label for="customerMobile">
+                            মোবাইল নম্বর
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerMobile"
+                            placeholder="01XXXXXXXXX"
+                            maxlength="11"
+                            inputmode="numeric"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Address -->
+
+                    <div class="checkout-group">
+
+                        <label for="customerAddress">
+                            সম্পূর্ণ ঠিকানা
+                        </label>
+
+                        <textarea
+                            id="customerAddress"
+                            rows="4"
+                            placeholder="বাড়ি/গ্রাম, রাস্তা, এলাকা লিখুন"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- District -->
+
+                    <div class="checkout-group">
+
+                        <label for="customerDistrict">
+                            জেলা
+                        </label>
+
+                        <select
+                            id="customerDistrict"
+                            required>
+
+                            <option value="">
+                                জেলা নির্বাচন করুন
+                            </option>
+
+                            <option>
+                                ঢাকা
+                            </option>
+
+                            <option>
+                                চট্টগ্রাম
+                            </option>
+
+                            <option>
+                                খুলনা
+                            </option>
+
+                            <option>
+                                রাজশাহী
+                            </option>
+
+                            <option>
+                                বরিশাল
+                            </option>
+
+                            <option>
+                                সিলেট
+                            </option>
+
+                            <option>
+                                রংপুর
+                            </option>
+
+                            <option>
+                                ময়মনসিংহ
+                            </option>
+
+                            <option>
+                                যশোর
+                            </option>
+
+                            <option>
+                                ঝিনাইদহ
+                            </option>
+
+                            <option>
+                                কুষ্টিয়া
+                            </option>
+
+                            <option>
+                                অন্যান্য
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Delivery Method -->
+
+                    <div class="checkout-group">
+
+                        <label>
+                            Delivery Method
+                        </label>
+
+
+                        <div class="delivery-options">
+
+
+                            <label class="delivery-option">
+
+                                <input
+                                    type="radio"
+                                    name="deliveryMethod"
+                                    value="home"
+                                    checked
+                                >
+
+                                <span>
+                                    🚚 Home Delivery
+                                </span>
+
+                            </label>
+
+
+                            <label class="delivery-option">
+
+                                <input
+                                    type="radio"
+                                    name="deliveryMethod"
+                                    value="courier"
+                                >
+
+                                <span>
+                                    📦 Courier Delivery
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Payment -->
+
+                    <div class="checkout-group">
+
+                        <label>
+                            Payment Method
+                        </label>
+
+
+                        <div class="payment-options">
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="cod"
+                                    checked
+                                >
+
+                                <span>
+                                    💵 Cash on Delivery
+                                </span>
+
+                            </label>
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="mobile"
+                                >
+
+                                <span>
+                                    📱 Mobile Payment
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Place Order -->
+
+                    <button
+                        type="submit"
+                        class="place-order-btn">
+
+                        🛍️ Place Order
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- ================= ORDER SUMMARY ================= -->
+
+            <div class="checkout-summary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <div id="checkoutItems">
+
+                    <!-- Products will appear here -->
+
+                </div>
+
+
+                <div class="checkout-summary-line"></div>
+
+
+                <div class="checkout-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="checkoutSubtotal">
+                        ৳0
+                    </strong>
+
+                </div>
+
+
+                <div class="checkout-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong id="checkoutDelivery">
+                        ৳0
+                    </strong>
+
+                </div>
+
+
+                <div class="checkout-summary-line"></div>
+
+
+                <div class="checkout-row checkout-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="checkoutTotal">
+                        ৳0
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="cart.html"
+                    class="back-cart">
+
+                    ← Back to Cart
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Nazmul Shop
+                </h3>
+
+                <p>
+                    Your trusted online shopping
+                    destination.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Customer Service
+                </h3>
+
+                <a href="#">
+                    Help Center
+                </a>
+
+                <a href="#">
+                    Return Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📞 01XXXXXXXXX
+                </p>
+
+                <p>
+                    📧 support@nazmulshop.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Nazmul Shop.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Checkout JavaScript -->
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

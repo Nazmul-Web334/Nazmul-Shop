@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Account - Nazmul Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="main-header">
+
+            <div class="logo">
+
+                <a href="index.html">
+                    Nazmul Shop
+                </a>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <a href="index.html"
+                   class="header-item">
+
+                    🏠 Home
+
+                </a>
+
+
+                <a href="cart.html"
+                   class="header-item">
+
+                    🛒 Cart
+
+                    <span id="cartCount">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#products">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                    </a>
+                </li>
+
+                <li>
+                    <a href="account.html">
+                        My Account
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= ACCOUNT PAGE ================= -->
+
+    <main class="account-page">
+
+
+        <div class="account-container">
+
+
+            <h1>
+                👤 My Account
+            </h1>
+
+
+            <p class="account-welcome">
+                আপনার Account-এর তথ্য
+            </p>
+
+
+
+            <!-- ================= PROFILE ================= -->
+
+            <section class="profile-card">
+
+                <div class="profile-icon">
+                    👤
+                </div>
+
+
+                <div class="profile-info">
+
+                    <h2 id="accountName">
+                        User Name
+                    </h2>
+
+                    <p id="accountMobile">
+                        01XXXXXXXXX
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= ACCOUNT MENU ================= -->
+
+            <section class="account-menu">
+
+
+                <a href="#orders"
+                   class="account-menu-item">
+
+                    <span>
+                        📦
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            My Orders
+                        </strong>
+
+                        <p>
+                            আপনার অর্ডারগুলো দেখুন
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a href="#profile"
+                   class="account-menu-item">
+
+                    <span>
+                        👤
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Profile Information
+                        </strong>
+
+                        <p>
+                            আপনার Account তথ্য
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </section>
+
+
+
+            <!-- ================= ORDERS ================= -->
+
+            <section
+                class="orders-section"
+                id="orders">
+
+
+                <h2>
+                    📦 My Orders
+                </h2>
+
+
+                <div id="ordersList">
+
+                    <p class="no-orders">
+                        এখনো কোনো Order নেই।
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= LOGOUT ================= -->
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                🚪 Logout
+
+            </button>
+
+
+
+            <!-- BACK HOME -->
+
+            <a
+                href="index.html"
+                class="back-home">
+
+                ← Back to Home
+
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Nazmul Shop
+                </h3>
+
+                <p>
+                    Your trusted online shopping
+                    destination.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Customer Service
+                </h3>
+
+                <a href="#">
+                    Help Center
+                </a>
+
+                <a href="#">
+                    Return Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📞 01XXXXXXXXX
+                </p>
+
+                <p>
+                    📍 Bangladesh
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Nazmul Shop.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Account JavaScript -->
+
+    <script src="account.js"></script>
+
+</body>
+
+</html>
