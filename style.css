@@ -2891,3 +2891,78 @@ body {
     color: #aaa;
     font-size: 13px;
 }
+/* =========================
+   CART MOBILE FINAL FIX
+========================= */
+
+@media (max-width: 700px) {
+
+    .cart-page {
+        width: 100%;
+        max-width: 100%;
+        padding: 35px 15px;
+        overflow: hidden;
+    }
+
+    .cart-layout {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .cart-items-section,
+    .cart-summary {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .cart-items-section {
+        padding: 15px;
+        overflow: hidden;
+    }
+
+    .cart-item {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .cart-product-image {
+        width: 75px;
+        height: 75px;
+        flex: 0 0 75px;
+    }
+
+    .cart-product-info {
+        min-width: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .cart-product-info h3,
+    .cart-product-info p {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .quantity-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .cart-summary {
+        position: static;
+    }
+
+    .summary-row {
+        min-width: 0;
+    }
+}
