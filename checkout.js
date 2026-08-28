@@ -2,8 +2,7 @@
 // NAZMUL SHOP - CHECKOUT SYSTEM
 // ==========================================
 
-
-// Cart থেকে পণ্য নেওয়া
+// Cart থেকে পণ্য নেওয়া
 let cart =
     JSON.parse(
         localStorage.getItem("nazmulCart")
@@ -34,13 +33,18 @@ const cartCount =
 
 
 // ==========================================
+// WHATSAPP NUMBER
+// ==========================================
+
+const whatsappNumber = "8801746410024";
+
+
+// ==========================================
 // CART COUNT
 // ==========================================
 
 if (cartCount) {
-
     cartCount.textContent = cart.length;
-
 }
 
 
@@ -53,7 +57,6 @@ function displayCheckoutItems() {
     if (!checkoutItems) {
         return;
     }
-
 
     // Cart খালি হলে
     if (cart.length === 0) {
@@ -149,14 +152,11 @@ function updateCheckoutTotal() {
     });
 
 
-    // Delivery Charge
     let delivery = 0;
 
 
     if (subtotal > 0) {
-
         delivery = 60;
-
     }
 
 
@@ -342,21 +342,120 @@ if (checkoutForm) {
             });
 
 
-            const delivery = 60;
+            const delivery =
+                subtotal > 0 ? 60 : 0;
+
 
             const total =
                 subtotal + delivery;
 
 
             // =================================
-            // CREATE ORDER
+            // CREATE ORDER ID
+            // =================================
+
+            const orderId =
+                "NZ" + Date.now();
+
+
+            // =================================
+            // CREATE PRODUCT LIST
+            // =================================
+
+            let productList = "";
+
+
+            cart.forEach(function(product, index) {
+
+                productList +=
+                    (index + 1) +
+                    ". " +
+                    product.name +
+                    " × " +
+                    product.quantity +
+                    " = ৳" +
+                    (
+                        Number(product.price) *
+                        Number(product.quantity)
+                    ) +
+                    "\n";
+
+            });
+
+
+            // =================================
+            // WHATSAPP MESSAGE
+            // =================================
+
+            const message =
+
+                "🛍️ *Nazmul Shop - New Order*\n\n" +
+
+                "📋 Order ID: " +
+                orderId +
+                "\n\n" +
+
+                "👤 Customer Name: " +
+                customerName +
+                "\n" +
+
+                "📱 Mobile: " +
+                mobile +
+                "\n" +
+
+                "🏠 Address: " +
+                address +
+                "\n" +
+
+                "📍 District: " +
+                district +
+                "\n\n" +
+
+                "📦 *Products:*\n" +
+
+                productList +
+
+                "\n" +
+
+                "🚚 Delivery: " +
+                (
+                    deliveryMethod === "home"
+                        ? "Home Delivery"
+                        : "Courier Delivery"
+                ) +
+                "\n" +
+
+                "💵 Payment: " +
+                (
+                    paymentMethod === "cod"
+                        ? "Cash on Delivery"
+                        : "Mobile Payment"
+                ) +
+                "\n\n" +
+
+                "Subtotal: ৳" +
+                subtotal +
+                "\n" +
+
+                "Delivery Charge: ৳" +
+                delivery +
+                "\n" +
+
+                "💰 *Total: ৳" +
+                total +
+                "\n\n" +
+
+                "Thank you for shopping with Nazmul Shop ❤️";
+
+
+            // =================================
+            // SAVE ORDER LOCALLY
             // =================================
 
             const order = {
 
                 orderId:
-                    "NZ" +
-                    Date.now(),
+                    orderId,
 
                 customerName:
                     customerName,
@@ -397,10 +496,6 @@ if (checkoutForm) {
             };
 
 
-            // =================================
-            // SAVE ORDER
-            // =================================
-
             let orders =
                 JSON.parse(
                     localStorage.getItem(
@@ -419,6 +514,23 @@ if (checkoutForm) {
 
 
             // =================================
+            // OPEN WHATSAPP
+            // =================================
+
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                encodeURIComponent(message);
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+
+            // =================================
             // CLEAR CART
             // =================================
 
@@ -432,13 +544,13 @@ if (checkoutForm) {
             // =================================
 
             alert(
-                "অর্ডার সফলভাবে গ্রহণ করা হয়েছে! 🎉\n\n" +
+                "অর্ডারের তথ্য WhatsApp-এ পাঠানোর জন্য প্রস্তুত হয়েছে। 🎉\n\n" +
                 "Order ID: " +
-                order.orderId
+                orderId
             );
 
 
-            // Order Success Page
+            // Success Page
             window.location.href =
                 "order-success.html";
 
